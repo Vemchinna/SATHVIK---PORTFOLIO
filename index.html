@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vemula Sathvik | Portfolio</title>
+    <meta name="description" content="Portfolio of Vemula Sathvik, Full Stack & Backend Developer, B.Tech CSE (Data Science) student, showcasing REST API design, ML models, and interactive web interfaces.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Spatial Cursor -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- Liquid Background Blobs -->
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <!-- Grid Overlay for Depth -->
+    <div class="grid-overlay"></div>
+
+    <!-- Floating Spatial Nav Dock -->
+    <nav class="nav-dock">
+        <div class="nav-container">
+            <a href="#hero" class="nav-item active" title="Home"><i data-lucide="home"></i><span>Home</span></a>
+            <a href="#about" class="nav-item" title="About & Education"><i data-lucide="user"></i><span>About</span></a>
+            <a href="#skills" class="nav-item" title="Skills"><i data-lucide="cpu"></i><span>Skills</span></a>
+            <a href="#experience" class="nav-item" title="Experience"><i data-lucide="briefcase"></i><span>Experience</span></a>
+            <a href="#projects" class="nav-item" title="Projects"><i data-lucide="folder-git-2"></i><span>Projects</span></a>
+            <a href="#certifications" class="nav-item" title="Certifications"><i data-lucide="award"></i><span>Achievements</span></a>
+            <a href="#contact" class="nav-item" title="Contact"><i data-lucide="mail"></i><span>Contact</span></a>
+            <button id="theme-toggle" class="nav-item" title="Toggle Theme" style="background:none; border:none; cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon-sun" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <span>Theme</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="content-wrapper">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="glass-card hero-card" data-tilt>
+                <div class="glow-point"></div>
+                <div class="hero-content-layout">
+                    <div class="hero-text-side">
+                        <div class="hero-header">
+                            <span class="badge neon-text">🟢 Available for Opportunities</span>
+                            <h1 class="glitch-title">VEMULA SATHVIK</h1>
+                            <div class="typewriter-container">
+                                <span class="typing-prefix">I'm a </span>
+                                <span id="typing-text">Full Stack Developer</span><span class="cursor">|</span>
+                            </div>
+                        </div>
+                        <p class="hero-desc">
+                            B.Tech CSE (Data Science) undergraduate specializing in building scalable REST APIs, MySQL database designs, and machine learning pipelines. Experienced in JWT authentication, query optimization, and intelligent automation.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary glass-btn"><i data-lucide="sparkles"></i> View Projects</a>
+                            <a href="#contact" class="btn btn-secondary glass-btn"><i data-lucide="send"></i> Let's Connect</a>
+                            <a href="https://drive.google.com/file/d/1OxV_4D7dXa96XDPdsSZOgGTlgupPJOrM/view?usp=drive_link" download class="btn btn-secondary glass-btn download-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                                Download Resume
+                            </a>
+                        </div>
+                        <div class="hero-socials">
+                            <a href="https://github.com/vemchinna" target="_blank" class="social-icon" title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/vemula-sathvik" target="_blank" class="social-icon" title="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="mailto:vemsimba@gmail.com" class="social-icon" title="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </a>
+                            <a href="Mobile:+917032620789" class="social-icon" title="Phone">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image-side">
+                        <div class="avatar-container-glass">
+                            <img src="me dp.jpg" alt="Vemula Sathvik" class="avatar-image" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300f2fe%22 stroke-width=%221%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2%22/><circle cx=%2212%22 cy=%227%22 r=%224%22/></svg>';">
+                            <div class="avatar-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section id="about" class="section">
+            <h2 class="section-title"><i data-lucide="user"></i> About & Education</h2>
+            <div class="about-grid">
+                <!-- Bio & Core Concepts -->
+                <div class="glass-card bio-card" data-tilt>
+                    <h3>Core Foundation</h3>
+                    <p>
+                        Pursuing a degree in Computer Science Engineering with a specialization in Data Science has equipped me with a strong foundation in theoretical concepts and hands-on application. I thrive on translating complex database structures and ML algorithms into production-ready backends.
+                    </p>
+                    <div class="concepts-grid">
+                        <div class="concept-tag"><i data-lucide="git-branch"></i> DSA</div>
+                        <div class="concept-tag"><i data-lucide="box"></i> OOPS</div>
+                        <div class="concept-tag"><i data-lucide="database"></i> DBMS</div>
+                        <div class="concept-tag"><i data-lucide="terminal"></i> Operating Systems</div>
+                        <div class="concept-tag"><i data-lucide="activity"></i> Computer Networks</div>
+                        <div class="concept-tag"><i data-lucide="code-2"></i> Software Engineering</div>
+                        <div class="concept-tag"><i data-lucide="brain"></i> AI / ML</div>
+                        <div class="concept-tag"><i data-lucide="layout"></i> UI - UX</div>
+                    </div>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="glass-card education-card">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2023 – Present</span>
+                            <h4>B.Tech in CSE (Data Science)</h4>
+                            <p class="timeline-sub">CMR Engineering College</p>
+                            <span class="score-badge">CGPA: 7.86</span>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2021 – 2023</span>
+                            <h4>Sri Chaitanya Junior Kalasala</h4>
+                            <p class="timeline-sub">Class 12 (MPC)</p>
+                            <span class="score-badge">Percentage: 86.2%</span>
+                        </div>
+                         <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2020</span>
+                            <h4>St.Mary's Bethany Convent Vidyalaya (H.S)</h4>
+                            <p class="timeline-sub">Class 10</p>
+                            <span class="score-badge">GPA: 9.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title"><i data-lucide="cpu"></i> Technical Ecosystem</h2>
+            <div class="skills-container">
+                <!-- Languages -->
+                <div class="glass-card skill-card" data-tilt>
+                    <div class="skill-icon-header orange-glow">
+                        <i data-lucide="code"></i>
+                        <h3>Languages & Frameworks</h3>
+                    </div>
+                    <div class="languages-flex">
+                        <div class="lang-tag">Python</div>
+                        <div class="lang-tag">Java</div>
+                        <div class="lang-tag">JavaScript</div>
+                        <div class="lang-tag">C / C++</div>
+                        <div class="lang-tag">HTML5</div>
+                        <div class="lang-tag">CSS3</div>
+                        <div class="lang-tag">React</div>
+                        <div class="lang-tag">SQL</div>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="glass-card skill-card" data-tilt>
+                    <div class="skill-icon-header blue-glow">
+                        <i data-lucide="database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span>MySQL / SQL</span><div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div></li>
+                        <li><span>Schema Normalization</span><div class="skill-bar"><div class="skill-fill" style="width: 82%;"></div></div></li>
+                        <li><span>Query Optimization</span><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></li>
+                        <li><span>Database Design</span><div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div></li>
+                    </ul>
+                </div>
+
+                 <!-- Tools -->
+                <div class="glass-card skill-card" data-tilt>
+                    <div class="skill-icon-header yellow-glow">
+                        <i data-lucide="wrench"></i>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="languages-flex">
+                        <div class="lang-tag">Git</div>
+                        <div class="lang-tag">GitHub</div>
+                        <div class="lang-tag">VS Code</div>
+                        <div class="lang-tag">Postman</div>
+                        <div class="lang-tag">Jupyter Notebook</div>
+                        <div class="lang-tag">Node.js</div>
+                        <div class="lang-tag">Express.js</div>
+                        <div class="lang-tag">Flask</div>
+                        <div class="lang-tag">Apache Tomcat</div>
+                        <div class="lang-tag">Eclipse</div>
+                    </div>
+                </div>
+
+                <!-- Frontend Core -->
+                <div class="glass-card skill-card" data-tilt>
+                    <div class="skill-icon-header pink-glow">
+                        <i data-lucide="monitor"></i>
+                        <h3>Frontend Core</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span>HTML5 & CSS3</span><div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></li>
+                        <li><span>JavaScript (ES6+)</span><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></li>
+                        <li><span>Responsive Design</span><div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div></li>
+                        <li><span>Chart.js & Data Viz</span><div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div></li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-card skill-card" data-tilt>
+                    <div class="skill-icon-header purple-glow">
+                        <i data-lucide="server"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span>Python (Flask)</span><div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></li>
+                        <li><span>RESTful API Design</span><div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div></li>
+                        <li><span>JWT Auth & RBAC</span><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></li>
+                        <li><span>Server-side Logic</span><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></li>
+                    </ul>
+                </div>
+
+
+                <!-- AI / ML & Data -->
+                <div class="glass-card skill-card" data-tilt>
+                    <div class="skill-icon-header cyan-glow">
+                        <i data-lucide="brain-circuit"></i>
+                        <h3>ML / AI & Data</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><span>Scikit-learn & XGBoost</span><div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div></li>
+                        <li><span>OpenCV & YOLOv8</span><div class="skill-bar"><div class="skill-fill" style="width: 78%;"></div></div></li>
+                        <li><span>NumPy & Pandas</span><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></li>
+                        <li><span>Librosa & Signal Processing</span><div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title"><i data-lucide="briefcase"></i> Work Experience</h2>
+            <div class="experience-timeline">
+                <!-- Qtechsolutions -->
+                <div class="experience-card glass-card">
+                    <div class="exp-badge">Current</div>
+                    <div class="exp-header">
+                        <div>
+                            <h3> Full Stack Intern</h3>
+                            <h4 class="company-name">Qtechsolutions pvt. ltd.</h4>
+                        </div>
+                        <span class="exp-date">2025 – Present</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Developed and deployed <strong>full-stack web applications</strong> using Flask REST APIs connected to optimized MySQL databases.</li>
+                        <li>Built robust RESTful APIs handling <strong>500+ daily transactions</strong> with 99.9% uptime; implemented JWT authentication and role-based access control (RBAC).</li>
+                        <li>Optimized complex MySQL queries and index schema design, boosting data retrieval speeds by <strong>35%</strong>.</li>
+                        <li>Automated backend validation workflows using custom Python scripting, slashing QA cycles and manual efforts by <strong>40%</strong>.</li>
+                    </ul>
+                    <!-- <div class="exp-metrics">
+                        <div class="metric-box"><span class="metric-num">500+</span><span class="metric-lbl">Daily Txn</span></div>
+                        <div class="metric-box"><span class="metric-num">99.9%</span><span class="metric-lbl">Uptime</span></div>
+                        <div class="metric-box"><span class="metric-num">+35%</span><span class="metric-lbl">Retrieval Speed</span></div>
+                        <div class="metric-box"><span class="metric-num">-40%</span><span class="metric-lbl">QA Overhead</span></div>
+                    </div> -->
+                </div>
+
+                <!-- Cognifyz -->
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Web Development Intern</h3>
+                            <h4 class="company-name">Cognifyz Technologies pvt. ltd.</h4>
+                        </div>
+                        <span class="exp-date">Jun 2025 – Jul 2025</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Built responsive, <strong>cross-browser compatible frontends</strong> using HTML5, CSS3, and JavaScript patterns.</li>
+                        <li>Supported database/backend integration, linking interactive client interfaces with Python server endpoints.</li>
+                        <li>Improved overall page load and response speed metrics by <strong>20%</strong> via lazy loading assets and code compression.</li>
+                    </ul>
+                    <!-- <div class="exp-metrics">
+                        <div class="metric-box"><span class="metric-num">+20%</span><span class="metric-lbl">Speed Optimization</span></div>
+                        <div class="metric-box"><span class="metric-num">HTML5</span><span class="metric-lbl">Semantic Code</span></div>
+                        <div class="metric-box"><span class="metric-num">CSS3</span><span class="metric-lbl">Transitions</span></div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="project-section-header">
+                <h2 class="section-title"><i data-lucide="folder-git-2"></i> Featured Work</h2>
+                <div class="filter-group glass-card">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="ml-ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="analytics">Data / Analytics</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- SpectraShield -->
+                <div class="project-card glass-card" data-category="ml-ai" data-tilt>
+                    <div class="proj-img-placeholder shield-gradient">
+                        <i data-lucide="shield-check" class="proj-banner-icon"></i>
+                        <span class="proj-year">2026</span>
+                    </div>
+                    <div class="proj-content">
+                        <div class="proj-header">
+                            <h3>SpectraShield</h3>
+                            <a href="https://github.com/Vemchinna/SPECTRASHIELD" target="_blank" class="proj-link" title="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                        </div>
+                        <p class="proj-subheader">Deepfake Audio Detection System</p>
+                        <p class="proj-desc">
+                            An advanced machine learning pipeline that classifies voice recordings to detect synthesised or deepfake audio patterns.
+                        </p>
+                        <div class="proj-stats">
+                            <div class="stat-bubble"><strong>92%</strong> Accuracy</div>
+                            <div class="stat-bubble"><strong>&lt;200ms</strong> Latency</div>
+                            <div class="stat-bubble">GridSearchCV</div>
+                        </div>
+                        <div class="proj-tech">
+                            <span>Python</span><span>Flask</span><span>XGBoost</span><span>Librosa</span><span>Scikit-learn</span>
+                        </div>
+                        <button class="btn-more-info" onclick="openProjectModal('spectrashield')">View Content <i data-lucide="arrow-up-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- FuelShot -->
+                <div class="project-card glass-card" data-category="fullstack" data-tilt>
+                    <div class="proj-img-placeholder fuel-gradient">
+                        <i data-lucide="fuel" class="proj-banner-icon"></i>
+                        <span class="proj-year">2025</span>
+                    </div>
+                    <div class="proj-content">
+                        <div class="proj-header">
+                            <h3>FuelShot</h3>
+                            <a href="https://github.com/Vemchinna/FUEL-SHOT" target="_blank" class="proj-link" title="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                        </div>
+                        <p class="proj-subheader">Emergency Fuel Delivery Platform</p>
+                        <p class="proj-desc">
+                            On-demand emergency petrol and diesel delivery system featuring custom role-based dashboards and instant API dispatches.
+                        </p>
+                        <div class="proj-stats">
+                            <div class="stat-bubble"><strong>8 Tables</strong> Schema</div>
+                            <div class="stat-bubble"><strong>&lt;300ms</strong> API Response</div>
+                            <div class="stat-bubble">Normalized</div>
+                        </div>
+                        <div class="proj-tech">
+                            <span>Flask</span><span>MySQL</span><span>REST APIs</span><span>HTML5/CSS3</span><span>JS</span>
+                        </div>
+                        <button class="btn-more-info" onclick="openProjectModal('fuelshot')">View Content <i data-lucide="arrow-up-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Financial Insights -->
+                <div class="project-card glass-card" data-category="analytics" data-tilt>
+                    <div class="proj-img-placeholder finance-gradient">
+                        <i data-lucide="trending-up" class="proj-banner-icon"></i>
+                        <span class="proj-year">2025</span>
+                    </div>
+                    <div class="proj-content">
+                        <div class="proj-header">
+                            <h3>Financial Insights</h3>
+                            <a href="https://github.com/Vemchinna/FUEL-SHOT" target="_blank" class="proj-link" title="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                        </div>
+                        <p class="proj-subheader">Financial Literacy & KPI Analytics Platform</p>
+                        <p class="proj-desc">
+                            Interactive visual dashboard that simplifies complex parameters (EMIs, gold loans, insurance policies) using automated pipelines.
+                        </p>
+                        <div class="proj-stats">
+                            <div class="stat-bubble"><strong>50k+</strong> Data Rows</div>
+                            <div class="stat-bubble"><strong>-60%</strong> Analysis Time</div>
+                            <div class="stat-bubble">Chart.js</div>
+                        </div>
+                        <div class="proj-tech">
+                            <span>Python</span><span>Pandas</span><span>NumPy</span><span>MySQL</span><span>Chart.js</span>
+                        </div>
+                        <button class="btn-more-info" onclick="openProjectModal('financialinsights')">View Content<i data-lucide="arrow-up-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- AI Traffic Management System -->
+                <div class="project-card glass-card" data-category="ml-ai" data-tilt>
+                    <div class="proj-img-placeholder traffic-gradient">
+                        <i data-lucide="car" class="proj-banner-icon"></i>
+                        <span class="proj-year">2025</span>
+                    </div>
+                    <div class="proj-content">
+                        <div class="proj-header">
+                            <h3>AI Traffic Management System</h3>
+                            <a href="https://github.com/Vemchinna/TRAFFIC-MANAGEMENT-SYSTEM-USING-AI" target="_blank" class="proj-link" title="GitHub Repository">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            </a>
+                        </div>
+                        <p class="proj-subheader">Computer Vision Signal System</p>
+                        <p class="proj-desc">
+                            Automated computer vision system utilizing deep learning to dynamically adjust traffic light cycles and prevent congestion.
+                        </p>
+                        <div class="proj-stats">
+                            <div class="stat-bubble"><strong>88%</strong> Accuracy</div>
+                            <div class="stat-bubble"><strong>25 FPS</strong> Feed</div>
+                            <div class="stat-bubble"><strong>-45%</strong> Congestion</div>
+                        </div>
+                        <div class="proj-tech">
+                            <span>Python</span><span>YOLOv8</span><span>OpenCV</span><span>NumPy</span>
+                        </div>
+                        <button class="btn-more-info" onclick="openProjectModal('traffic')">View Content<i data-lucide="arrow-up-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements -->
+        <section id="certifications" class="section">
+            <h2 class="section-title"><i data-lucide="award"></i> Certifications & Badges</h2>
+            <div class="certs-grid">
+                <!-- Salesforce -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper salesforce-blue">
+                        <i data-lucide="cloud"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2025</span>
+                        <h3>Salesforce Certified Agentforce Specialist</h3>
+                        <p>Salesforce Credentialing Ecosystem</p>
+                    </div>
+                </div>
+
+                <!-- Deloitte -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper deloitte-green">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2025</span>
+                        <h3>Deloitte - Data Analytics Simulation</h3>
+                        <p>Deloitte Virtual Experience Program</p>
+                    </div>
+                </div>
+
+                <!-- Hexart AI -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper hexart-purple">
+                        <i data-lucide="binary"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2024</span>
+                        <h3>AI Beginner, Foundation & Advanced</h3>
+                        <p>HEXART AI Program</p>
+                    </div>
+                </div>
+
+                <!-- Adobe Analytics -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper code-gold">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2026</span>
+                        <h3>Analytics Foundations ADOBE</h3>
+                        <p>ADOBE analytics foundations</p>
+                    </div>
+                </div>
+
+                <!-- Cisco -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper hexart-purple">
+                        <i data-lucide="binary"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2025</span>
+                        <h3>Python Essentials</h3>
+                        <p>Cisco Networking Academy</p>
+                    </div>
+                </div>
+
+                <!-- Infosys Springboard -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper hexart-purple">
+                        <i data-lucide="binary"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2025</span>
+                        <h3>Python Foundations</h3>
+                        <p>Python foundations - Infosys Springboard</p>
+                    </div>
+                </div>
+
+                 <!-- SkillCourse -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper deloitte-green">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">2026</span>
+                        <h3>SkillCourse -    Power-bi Course</h3>
+                        <p>Power-bi crashc course - skillcourse</p>
+                    </div>
+                </div>
+
+                <!-- DSA Badges -->
+                <div class="glass-card cert-card" data-tilt>
+                    <div class="cert-icon-wrapper code-gold">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-year">Continuous</span>
+                        <h3>200+ DSA Problems Solved</h3>
+                        <p>LeetCode & Coding Platforms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title"><i data-lucide="mail"></i> Get In Touch</h2>
+            <div class="contact-layout">
+                <!-- Left: Card Info -->
+                <div class="glass-card contact-info-card" data-tilt>
+                    <h3>Contact Information</h3>
+                    <p class="contact-tagline">Feel free to reach out for any opportunities, project collaborations, or technical discussions.</p>
+                    <div class="contact-links-list">
+                        <a href="mailto:vemsimba@gmail.com" class="contact-link-item">
+                            <div class="contact-icon purple"><i data-lucide="mail"></i></div>
+                            <div>
+                                <span class="lbl">Email Me</span>
+                                <span class="val">vemsimba@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917032620789" class="contact-link-item">
+                            <div class="contact-icon blue"><i data-lucide="phone"></i></div>
+                            <div>
+                                <span class="lbl">Call Me</span>
+                                <span class="val">+91 7032620789</span>
+                            </div>
+                        </a>
+                        <div class="contact-link-item">
+                            <div class="contact-icon cyan"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <span class="lbl">Location</span>
+                                <span class="val">Hyderabad, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Right: Form -->
+<div class="glass-card contact-form-card">
+    <h3>Send A Message</h3>
+
+    <form id="portfolio-contact-form"
+          action="https://formspree.io/f/mdarwqkj"
+          method="POST">
+
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Kevin Cooper">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="kevin@example.com">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="Project Discussion">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary glass-btn submit-btn">
+            <i data-lucide="send"></i>
+            <span>Dispatch Message</span>
+        </button>
+
+    </form>
+</div>
+
+<script>
+document.getElementById("portfolio-contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const submitBtn = form.querySelector(".submit-btn");
+    const btnText = submitBtn.querySelector("span");
+
+    submitBtn.disabled = true;
+    btnText.textContent = "Sending...";
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            alert("✅ Thank you! Your message has been sent successfully.");
+            form.reset();
+        } else {
+            alert("❌ Failed to send your message. Please try again.");
+        }
+    } catch (error) {
+        alert("⚠️ Network error. Please check your internet connection.");
+    }
+
+    btnText.textContent = "Dispatch Message";
+    submitBtn.disabled = false;
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+});
+</script>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-glass">
+            <p>&copy; 2026 Vemula Sathvik. Build Beyond Boundaries. All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Interactive Project Modal Overlay -->
+    <div id="project-modal" class="modal-overlay" onclick="closeProjectModal()">
+        <div class="modal-content glass-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeProjectModal()"><i data-lucide="x"></i></button>
+            <div id="modal-body">
+                <!-- Dynamic Content Loaded via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Entry -->
+    <script src="script.js"></script>
+</body>
+</html>
